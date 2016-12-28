@@ -4,9 +4,12 @@ public class Basics {
 
   public static void main(String[] args) {
     Console console = System.console();
-    console.printf("Hello, my name is Barrett\n");
+    //  Hold a name in a variable, firstName, as a String
+    String firstName = "Barrett";
+    //  Insert the firstName variable into the string
+    console.printf("Hello, my name is %s\n", firstName);
     console.printf("Today's date is December 28th, 2016\n");
-    console.printf("I have started learning Java");
+    console.printf("I have started learning Java\n");
   }
 
 }
