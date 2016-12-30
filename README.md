@@ -7,6 +7,7 @@ This repo is a collection of projects completed while learning Java.  Check each
 ## Contents
 
 1. Basics
+2. Objects
 
 ## Technologies
 
