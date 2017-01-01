@@ -1,7 +1,8 @@
 class PezDispenser {
   //  Inside the class scope
 
-  String characterName = "Yoda";
+  //  The keyword 'private' here ensures that other files in the same package cannot access the variable
+  private String characterName = "Yoda";
 
 
 }
