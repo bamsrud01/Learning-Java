@@ -8,11 +8,6 @@ public class Example {
     System.out.printf("This dispenser is %s %n", dispenser.getCharacterName("Yoda"));
     //  Change the characterName property on this instance of the PezDispenser object
 
-    /*  Removed these lines due to making the characterName variable private to the PezDispenser class
-    dispenser.characterName = "Darth Vader";
-    System.out.printf("The dispenser is now %s %n", dispenser.characterName);
-    */
-
   }
 
 }
