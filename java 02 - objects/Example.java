@@ -8,7 +8,14 @@ public class Example {
     //  Create a new PEZ dispenser object
     PezDispenser dispenser = new PezDispenser("Yoda");
     System.out.printf("This dispenser is %s %n", dispenser.getCharacterName());
-    //  Change the characterName property on this instance of the PezDispenser object
+    if (dispenser.isEmpty()) {
+      System.out.println("Dispenser is empty!");
+    }
+    System.out.println("Filling the dispenser with PEZ...");
+    dispenser.fill();
+    if (!dispenser.isEmpty()) {
+      System.out.println("Dispenser is not empty.");
+    }
 
   }
 
