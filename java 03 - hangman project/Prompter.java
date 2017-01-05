@@ -22,4 +22,9 @@ class Prompter {
     return game.applyGuess(guess);
   }
 
+  //  Display progress to user
+  public void displayProgress() {
+    System.out.printf("What's the word???   %s %n", game.getCurrentProgress());
+  }
+
 }
