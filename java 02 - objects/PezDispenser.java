@@ -19,8 +19,15 @@ class PezDispenser {
   }
 
   //  The keyword void means it doesn't return anything
+  //  It is possible to have two methods with the same name.
+    //  No argument calls the first, one argument calls the second
+    //  This is called 'overloading' the method
   public void fill() {
-    pezCount = MAX_PEZ;
+    fill(MAX_PEZ);
+  }
+
+  public void fill(int pezAmount) {
+    pezCount += pezAmount;
   }
 
   //  Method to dispense PEZ
