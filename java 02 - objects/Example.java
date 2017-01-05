@@ -29,7 +29,7 @@ public class Example {
       dispenser.fill(400);
     } catch (IllegalArgumentException iae) {
       System.out.println("Something broke!");
-      System.out.printf("The error was %s: %n", iae.getMessage());
+      System.out.printf("The error was: %s %n", iae.getMessage());
     }
 
   }
