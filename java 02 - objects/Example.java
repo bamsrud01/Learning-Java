@@ -16,6 +16,13 @@ public class Example {
     if (!dispenser.isEmpty()) {
       System.out.println("Dispenser is not empty.");
     }
+    //  While loop to dispense pez while it is still in the dispenser
+    while (dispenser.dispense()) {
+      System.out.println("Chomp!");
+    }
+    if (dispenser.isEmpty()) {
+      System.out.println("Ate it all!");
+    }
 
   }
 
