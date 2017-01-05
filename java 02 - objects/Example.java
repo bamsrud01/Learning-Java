@@ -23,6 +23,14 @@ public class Example {
     if (dispenser.isEmpty()) {
       System.out.println("Ate it all!");
     }
+    //  Try/catch statement:  If something in try fails, run catch
+    //  This contains the error, preventing it from stopping the entire program
+    try {
+      dispenser.fill(400);
+    } catch (IllegalArgumentException iae) {
+      System.out.println("Something broke!");
+      System.out.printf("The error was %s: %n", iae.getMessage());
+    }
 
   }
 

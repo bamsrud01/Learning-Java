@@ -27,7 +27,11 @@ class PezDispenser {
   }
 
   public void fill(int pezAmount) {
-    pezCount += pezAmount;
+    int newAmount = pezCount + pezAmount;
+    if (newAmount > MAX_PEZ) {
+      throw new IllegalArgumentException("Too many PEZ!");
+    }
+    pezCount = newAmount;
   }
 
   //  Method to dispense PEZ
