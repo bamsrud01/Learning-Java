@@ -1,5 +1,6 @@
 class Game {
   //  Declare variables
+  public static final int MAX_MISSES = 7;
   private String answer;
   private String hits;
   private String misses;
@@ -20,6 +21,11 @@ class Game {
       misses += letter;
     }
     return isHit;
+  }
+
+  //  Method to get number of remaining tries
+  public int getRemainingTries() {
+    return MAX_MISSES - misses.length();
   }
 
   //

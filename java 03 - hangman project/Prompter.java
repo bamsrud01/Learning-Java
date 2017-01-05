@@ -24,7 +24,9 @@ class Prompter {
 
   //  Display progress to user
   public void displayProgress() {
-    System.out.printf("What's the word???   %s %n", game.getCurrentProgress());
+    System.out.printf("You have %d remaining guesses:  %s %n",
+                      game.getRemainingTries(),
+                      game.getCurrentProgress());
   }
 
 }
