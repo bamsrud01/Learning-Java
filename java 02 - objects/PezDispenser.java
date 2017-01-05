@@ -17,9 +17,20 @@ class PezDispenser {
     this.characterName = characterName;
     pezCount = 0;
   }
+
   //  The keyword void means it doesn't return anything
   public void fill() {
     pezCount = MAX_PEZ;
+  }
+
+  //  Method to dispense PEZ
+  public boolean dispense() {
+    boolean wasDispensed = false;
+    if (!isEmpty()) {
+      pezCount--;
+      wasDispensed = true;
+    }
+    return wasDispensed;
   }
 
   //  Method to determine if the PEZ dispense is empty
