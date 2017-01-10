@@ -14,6 +14,9 @@ class Game {
 
   //  method to determine if guess is in answer, and assign to hits or misses
   public boolean applyGuess(char letter) {
+    if (hits.indexOf(letter) != -1 || misses.indexOf(letter) != -1) {
+      throw new IllegalArgumentException(letter + " has already been guessed");
+    }
     boolean isHit = answer.indexOf(letter) != -1;
     if (isHit) {
       hits += letter;
