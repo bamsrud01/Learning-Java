@@ -23,6 +23,14 @@ class Game {
     return letter;
   }
 
+  //  First, enter the guess as a string, convert to character or eliminate
+  public boolean applyGuess(String letters) {
+    if (letters.length() == 0) {
+      throw new IllegalArgumentException("No letter found");
+    }
+    return applyGuess(letters.charAt(0));
+  }
+
   //  method to determine if guess is in answer, and assign to hits or misses
   public boolean applyGuess(char letter) {
     letter = normalizeGuess(letter);

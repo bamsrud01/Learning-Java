@@ -20,11 +20,9 @@ class Prompter {
     do {
       System.out.print("Enter a letter:  ");
       String guessInput = scanner.nextLine();
-      //  Take only the character at index 0
-      char guess = guessInput.charAt(0);
       try {
         //  Determine if character at index 0 is in the Hangman word
-        isHit = game.applyGuess(guess);
+        isHit = game.applyGuess(guessInput);
         isAcceptable = true;
       } catch(IllegalArgumentException iae) {
         System.out.printf("%s.  Please try again. %n", iae.getMessage());
