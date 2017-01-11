@@ -14,17 +14,22 @@ class Prompter {
   //  Handle user input for guesses
   public boolean promptForGuess() {
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter a letter:  ");
-    String guessInput = scanner.nextLine();
-    //  Take only the character at index 0
-    char guess = guessInput.charAt(0);
     boolean isHit = false;
-    try {
-      //  Determine if character at index 0 is in the Hangman word
-      isHit = game.applyGuess(guess);
-    } catch(IllegalArgumentException iae) {
-      System.out.println(iae.getMessage());
-    }
+    boolean isAcceptable = false;
+
+    do {
+      System.out.print("Enter a letter:  ");
+      String guessInput = scanner.nextLine();
+      //  Take only the character at index 0
+      char guess = guessInput.charAt(0);
+      try {
+        //  Determine if character at index 0 is in the Hangman word
+        isHit = game.applyGuess(guess);
+        isAcceptable = true;
+      } catch(IllegalArgumentException iae) {
+        System.out.printf("%s.  Please try again. %n", iae.getMessage());
+      }
+    } while (! isAcceptable);
 
     return isHit;
   }
