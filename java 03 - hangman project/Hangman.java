@@ -6,10 +6,12 @@ public class Hangman {
     Game game = new Game("treehouse");
     //  Create an instance of Prompter object using the game we have created
     Prompter prompter = new Prompter(game);
-    while (game.getRemainingTries() > 0) {
+    while (game.getRemainingTries() > 0 && !game.isWon()) {
       prompter.displayProgress();
       prompter.promptForGuess();
     }
-    
+
+    prompter.displayOutcome();
+
   }
 }
