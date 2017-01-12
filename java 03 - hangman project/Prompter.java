@@ -1,7 +1,7 @@
 //  Use Scanner to take user input
 import java.util.Scanner;
 
-class Prompter {
+public class Prompter {
 
   //  Create instance of Game object
   private Game game;
