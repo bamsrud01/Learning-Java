@@ -9,6 +9,7 @@ This repo is a collection of projects completed while learning Java.  Check each
 1. Basics
 2. Objects
 3. Project: Hangman
+4. Data Structures
 
 ## Technologies
 
