@@ -20,8 +20,15 @@ public class Treet {
     mCreationDate = creationDate;
   }
 
+  //  Tell compiler that you are overriding a method
+  //  If overridden method does not exist in supertype, will throw error
+  @Override
+  public String toString() {
+    return "Treet: \"" + mDescription + "\" - @" + mAuthor;
+  }
+
   //  Getter methods
-  
+
   public String getAuthor() {
     return mAuthor;
   }
