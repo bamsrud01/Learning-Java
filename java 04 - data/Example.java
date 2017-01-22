@@ -1,29 +1,33 @@
-//  First, import our package and Date (and Arrays)
 import java.util.Arrays;
 import java.util.Date;
+
 import com.teamtreehouse.Treet;
 
 public class Example {
 
   public static void main(String[] args) {
     Treet treet = new Treet(
-      "Barrett",
-      "This is my Treet: A Treehouse Tweet",
-      new Date(1421849732000L)  //  The L indicates the integer is long
+      "craigsdennis",
+      "Want to be famous? Simply tweet about Java and use " +
+      "the hashtag #treet. I'll use your tweet in a new " +
+      "@treehouse course about data structures.",
+      new Date(1421849732000L)
     );
-    Treet secondTreet= new Treet(
+    Treet secondTreet = new Treet(
       "journeytocode",
       "@treehouse makes learning Java sooooo fun! #treet",
       new Date(1421878767000L)
     );
-
-    System.out.printf("This is a new treet: %s %n", treet);
+    System.out.printf("This is a new Treet:  %s %n", treet);
     System.out.println("The words are:");
     for (String word: treet.getWords()) {
       System.out.println(word);
     }
+    Treet[] treets = {treet, secondTreet};
+    Arrays.sort(treets);
+    for (Treet exampleTreet : treets) {
+      System.out.println(exampleTreet);
+    }
   }
-  Treet[] treets = { treet, secondTreet };
-  Arrays.sort(treets);
 
 }
