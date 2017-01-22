@@ -11,6 +11,10 @@ public class Example {
       new Date(1421849732000L)  //  The L indicates the integer is long
     );
     System.out.printf("This is a new treet: %s %n", treet);
+    System.out.println("The words are:");
+    for (String word: treet.getWords()) {
+      System.out.println(word);
+    }
   }
 
 }
