@@ -5,11 +5,12 @@
 //  Declare file as part of the package
 package com.teamtreehouse;
 
-//  Import Date
+//  Import Date and Serializable
+import java.io.Serializable;
 import java.util.Date;
 
 //  Declare class
-public class Treet implements Comparable {
+public class Treet implements Comparable, Serializable {
   private String mAuthor;
   private String mDescription;
   private Date mCreationDate;

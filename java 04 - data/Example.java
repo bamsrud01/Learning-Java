@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 import com.teamtreehouse.Treet;
+import com.teamtreehouse.Treets;
 
 public class Example {
 
@@ -28,6 +29,11 @@ public class Example {
     for (Treet exampleTreet : treets) {
       System.out.println(exampleTreet);
     }
+  }
+  Treets.save(treets);
+  Treet[] reloadedTreets = Treets.load();
+  for ( Treets reloaded : reloadedTreets ) {
+    System.out.println(reloaded);
   }
 
 }
