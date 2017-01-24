@@ -29,11 +29,7 @@ public class Example {
     for (Treet exampleTreet : treets) {
       System.out.println(exampleTreet);
     }
-  }
-  Treets.save(treets);
-  Treet[] reloadedTreets = Treets.load();
-  for ( Treets reloaded : reloadedTreets ) {
-    System.out.println(reloaded);
+    Treets.save(treets);
   }
 
 }
