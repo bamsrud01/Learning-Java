@@ -7,7 +7,10 @@ package com.teamtreehouse;
 
 //  Import Date and Serializable
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 //  Declare class
 public class Treet implements Comparable<Treet>, Serializable {
@@ -56,7 +59,27 @@ public class Treet implements Comparable<Treet>, Serializable {
     return mCreationDate;
   }
 
-  public String[] getWords() {
-    return mDescription.toLowerCase().split("[^\\w#@']+");
+  public List<String> getWords() {
+    String[] words = mDescription.toLowerCase().split("[^\\w#@']+");
+    return Arrays.asList(words);
   }
+
+  public List<String> getHashTags() {
+    return getWordsPrefixedWith("#");
+  }
+
+  public List<String> getMentions() {
+    return getWordsPrefixedWith("@");
+  }
+
+  private List<String> getWordsPrefixedWith(String prefix) {
+    List<String> results = new ArrayList<String>();
+    for (String word : getWords()) {
+      if (word.startsWith(prefix)) {
+        results.add(word);
+      }
+    }
+    return results;
+  }
+
 }
