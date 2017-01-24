@@ -14,4 +14,20 @@ public class Treets {
       ioe.printStackTrace();
     }
   }
+  public static Treet[] load() {
+    Treet[] treets = new Treet[0];
+    try (
+      FileInputStream fis = new FileInputStream("treets.ser");
+      ObjectInputStream ois = new ObjectInputStream(fis);
+    ) {
+      treets = (Treet[]) ois.readObject();
+    } catch(IOException ioe) {
+      System.out.println("Error reading file");
+      ioe.printStackTrace();
+    } catch(ClassNotFoundException cnfe) {
+      System.out.println("Error loading Treets");
+      cnfe.printStackTrace();
+    }
+    return treets;
+  }
 }

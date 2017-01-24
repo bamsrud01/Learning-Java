@@ -30,6 +30,10 @@ public class Example {
       System.out.println(exampleTreet);
     }
     Treets.save(treets);
+    Treet[] reloadedTreets = Treets.load();
+    for (Treet reloaded : reloadedTreets) {
+      System.out.println(reloaded);
+    }
   }
 
 }
