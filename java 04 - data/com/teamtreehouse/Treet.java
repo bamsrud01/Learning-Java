@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 //  Declare class
-public class Treet implements Comparable, Serializable {
+public class Treet implements Comparable<Treet>, Serializable {
   private String mAuthor;
   private String mDescription;
   private Date mCreationDate;
@@ -31,8 +31,7 @@ public class Treet implements Comparable, Serializable {
   }
 
   @Override
-  public int compareTo(Object obj) {
-    Treet other = (Treet) obj;
+  public int compareTo(Treet other) {
     if (equals(other)) {
       return 0;
     }
