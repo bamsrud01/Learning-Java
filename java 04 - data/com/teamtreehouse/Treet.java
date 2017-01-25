@@ -14,6 +14,8 @@ import java.util.List;
 
 //  Declare class
 public class Treet implements Comparable<Treet>, Serializable {
+  private static final long serialVersionUID = -2822378675547683035L;
+  private boolean mBreakIt = true;
   private String mAuthor;
   private String mDescription;
   private Date mCreationDate;

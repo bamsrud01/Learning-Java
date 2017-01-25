@@ -10,10 +10,11 @@ public class Treets {
     ) {
       oos.writeObject(treets);
     } catch(IOException ioe) {
-      System.out.println("Problem saving Treets");
+      System.out.println("Problem saving treets");
       ioe.printStackTrace();
     }
   }
+
   public static Treet[] load() {
     Treet[] treets = new Treet[0];
     try (
@@ -24,7 +25,7 @@ public class Treets {
     } catch(IOException ioe) {
       System.out.println("Error reading file");
       ioe.printStackTrace();
-    } catch(ClassNotFoundException cnfe) {
+    } catch (ClassNotFoundException cnfe) {
       System.out.println("Error loading Treets");
       cnfe.printStackTrace();
     }
