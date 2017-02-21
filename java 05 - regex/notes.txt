@@ -43,3 +43,8 @@ Take this sentence: 'Procrastination is surely not the destination.  Should we t
 Find the 'sh' sounds
 sh|ti|su -> The pipe is an 'or' selector.  Let's select the entire word!
 (\w*(sh|ti|su)\w*)
+
+'Surely capturing shushes shall show how beneficial Regular Expressions actually are'
+
+Let's ignore the case, as in 'Surely'
+(?i) -> Ignore case, but has an alternative in Java Pattern, Pattern.CASE_INSENSITIVE
