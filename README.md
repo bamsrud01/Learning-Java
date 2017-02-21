@@ -10,6 +10,7 @@ This repo is a collection of projects completed while learning Java.  Check each
 2. Objects
 3. Project: Hangman
 4. Data Structures
+5. Regular Expressions
 
 ## Technologies
 

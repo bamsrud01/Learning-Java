@@ -1,0 +1,20 @@
+Regular Expressions allow strings to be examined in several ways, finding matching patterns.
+
+"I am a full-stack developer" can sometimes be written as "I am a full stack developer"
+
+full.stack -> the . is like a wild card.  Any character will match
+full.*stack -> The wild card can apply over any number of characters between full and stack.  For example, 'full and I like to eat pizza by the stack' will be a match
+full[ -]*stack -> This will match any length of characters that consist of the characters in the brackets.  So in this case, 'full - stack' will be a match
+[a-z] -> This is a range, and will find all letters between a and z, but is case sensitive
+[A-Za-z] -> This will find all letters in both cases
+[A-Za-z]* -> The * means 'one or more', so it will match entire chunks that match, rather than each letter.  Essentially, matches words
+\w* -> Shorthand for the above, finding entire words
+[^\w]* -> Find everything that ISN'T a word.  ^ means 'not'
+\W -> Shorthand for non-words
+
+Let's match a five-digit zip code (55414)
+
+[0-9]* -> Will match, as it finds all numerical characters of any length
+\d -> Shorthand for digits
+-These will not work, as shorter or longer strings will match
+\d{5} -> This specifies that the length must be five digits
