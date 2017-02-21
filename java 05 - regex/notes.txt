@@ -7,7 +7,7 @@ full.*stack -> The wild card can apply over any number of characters between ful
 full[ -]*stack -> This will match any length of characters that consist of the characters in the brackets.  So in this case, 'full - stack' will be a match
 [a-z] -> This is a range, and will find all letters between a and z, but is case sensitive
 [A-Za-z] -> This will find all letters in both cases
-[A-Za-z]* -> The * means 'one or more', so it will match entire chunks that match, rather than each letter.  Essentially, matches words
+[A-Za-z]* -> The * means 'zero or more', so it will match entire chunks that match, rather than each letter.  Essentially, matches words
 \w* -> Shorthand for the above, finding entire words
 [^\w]* -> Find everything that ISN'T a word.  ^ means 'not'
 \W -> Shorthand for non-words
@@ -29,3 +29,17 @@ US zip code system accepts an additional 4 digits after a hyphen, which is optio
 ^\d{5}-\d{4}$ -> This pattern will accept this form of zip code.  However, the original five-length zip code will no longer match
 Wrapping it in ()? will indicate it is optional
 ^\d{5}(-\d{4})?$
+
+Let's split a string by the non-word elements: 'JavaScript, HTML, CSS, Java'
+\W+ -> Selects one or more (+) non-word characters
+
+What if it was listed as 'JavaScript, HTML, CSS, and Java'
+\W+(and\W+)?
+
+
+
+
+Take this sentence: 'Procrastination is surely not the destination.  Should we talk about shiny things?'
+Find the 'sh' sounds
+sh|ti|su -> The pipe is an 'or' selector.  Let's select the entire word!
+(\w*(sh|ti|su)\w*)
