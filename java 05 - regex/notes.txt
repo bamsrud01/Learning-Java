@@ -18,3 +18,14 @@ Let's match a five-digit zip code (55414)
 \d -> Shorthand for digits
 -These will not work, as shorter or longer strings will match
 \d{5} -> This specifies that the length must be five digits
+
+HOWEVER, 'I live in 55414, near the university' will be a match, despite the rest of the string being invalid
+Use boundaries to specify the beginning and end
+^ -> Start of line
+$ -> End of line
+^\d{5}$ -> This will accept ONLY a 5-character numerical string, nothing before or after
+
+US zip code system accepts an additional 4 digits after a hyphen, which is optional, for example: 55414-1234
+^\d{5}-\d{4}$ -> This pattern will accept this form of zip code.  However, the original five-length zip code will no longer match
+Wrapping it in ()? will indicate it is optional
+^\d{5}(-\d{4})?$
