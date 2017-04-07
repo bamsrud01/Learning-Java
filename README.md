@@ -17,6 +17,7 @@ This repo is a collection of projects completed while learning Java.  Check each
 ### Udemy
 
   1. Basics
+  2. Object Oriented Principles
 
 ## Technologies
 
